@@ -24,8 +24,8 @@ def calDepthChanges(inList):
     counter = 0
     prevDepth = 0
 
-    # Loop over the input list and determine if the depth increases or decreases
-    # count the increases and print that value
+    # Loop over the input list and count depth increases over previous value
+    # Commented out code was used for troubleshooting
     for x in inList:
         if x > prevDepth and prevDepth != 0:
             counter += 1
