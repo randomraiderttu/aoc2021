@@ -20,11 +20,14 @@ class ventField:
         maxY = 0
         tmpVentField = []
 
+        # We need the max x and y coordinates to know how big of an empty field to generate
         for x in self.ventListCoordinates:
             maxX = max(maxX, x['From']['x'], x['To']['x'])
             maxY = max(maxY, x['From']['y'], x['To']['y'])
 
         print(f'Max X: {maxX}   - Max Y: {maxY}')
+        
+        # Given the maxes for each axis, create the field and return it
         for y in range(maxY+1):
             tmpList = [0 for x in range(maxX+1)]
             tmpVentField.append(tmpList)
