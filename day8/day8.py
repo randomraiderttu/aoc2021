@@ -1,24 +1,23 @@
 import os
 
-# Below is my array key
-#   0000
-#  1    2
-#  1    2
-#   3333
-#  4    5
-#  4    5
-#   6666
-#
-# 0 = (0,1,2,4,5,6)
-# 1 = (2,5)
-# 2 = (0,2,3,4,6)
-# 3 = (0,2,3,5,6)
-# 4 = (1,2,3,5)
-# 5 = (0,1,3,5,6)
-# 6 = (0,1,3,4,5,6)
-# 7 = (0,2,5)
-# 8 = (0,1,2,3,4,5,6)
-# 9 = (0,1,2,3,5,6)
+# Instructions for cipher
+# 1. Get your easy numbers: 1, 4, 7, and 8
+#       1 - only number with two signals
+#       4 - only number with four signals
+#       7 - only number with three signals
+#       8 - only number with all seven signals
+# 2. Get the 0, 6, and 9 - all the six signal numbers
+#       9 - get this first because you can use the signals from the 4 to find this number.
+#           The 0 and 6 do not have all the same signals as the 4
+#       0 - with the 9 figured out, use the signals from the 1 to find the 0
+#           The 6 doesn't have all the signals for the 1
+#       6 - This is the remaining six signal choice
+# 3. Get the 2, 3, and 5 - all five signal numbers
+#       3 - Get this first because you can use the signals from the 1 to find this number.
+#           Neither the 2 and 5 have all the signals for the 1
+#       5 - Next get the 5 and use the signals from the 6 to find it.
+#           All of the signals for the 5 are found in the 6 - not the case for the 2
+#       2 - Last remaining 5 signal choice
 
 class Display:
     """Display in the submarine consisting of signals and output
