@@ -63,7 +63,7 @@ def exercise2(inputList):
     # so we don't include them
     totIncreases = calDepthChanges(results[2:])
     print(f'Exercise2 depth increases: {totIncreases}')
-
+ 
 if __name__ == '__main__':
     input = ingestFile(fileName='inputFile.txt')
 
